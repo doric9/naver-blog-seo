@@ -1,0 +1,12 @@
+{
+  "skills": {
+    "naver-blog": {
+      "description": "네이버 블로그 포스트를 SEO 최적화하여 작성합니다",
+      "instructions_file": "skills/naver-blog-seo.md"
+    },
+    "naver-audit": {
+      "description": "기존 네이버 블로그 포스트의 SEO 상태를 진단하고 개선점을 제안합니다",
+      "instructions_file": "skills/naver-blog-audit.md"
+    }
+  }
+}
