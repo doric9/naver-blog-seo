@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:searchadvisor.naver.com)",
+      "WebFetch(domain:blog.naver.com)"
+    ]
+  }
+}

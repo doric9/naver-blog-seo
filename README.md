@@ -156,14 +156,21 @@ cp -r naver-blog-seo/.claude /your-project/
 
 ## 권한 설정
 
-`settings.local.json`에서 필요한 권한이 설정되어 있습니다:
+클론 후 `settings.local.json.example`을 복사하여 설정하세요:
+
+```bash
+cp .claude/settings.local.json.example .claude/settings.local.json
+```
+
+기본 설정:
 
 ```json
 {
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:searchadvisor.naver.com)"
+      "WebFetch(domain:searchadvisor.naver.com)",
+      "WebFetch(domain:blog.naver.com)"
     ]
   }
 }
