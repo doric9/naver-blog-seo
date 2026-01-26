@@ -1,8 +1,11 @@
-# Naver Blog SEO Skill Package for Claude Code
+# Naver Blog SEO Skill Package & Python Wrapper
 
-네이버 블로그 SEO 최적화를 위한 Claude Code 스킬 패키지입니다.
+[![PyPI version](https://badge.fury.io/py/naver-blog-seo.svg)](https://badge.fury.io/py/naver-blog-seo)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A Claude Skill for automated Naver Blog SEO optimization with Korean language support. Includes keyword analysis, content validation, and blog scoring tools.
+네이버 블로그 SEO 최적화를 위한 Claude Code 스킬 패키지 및 파이썬 래퍼입니다.
+
+A professional Claude Skill and Python library for automated Naver Blog SEO optimization. Features include keyword analysis, C-Rank/D.I.A+ guided content generation, and structured Pydantic-based SEO audits.
 
 ## 설치
 
@@ -184,6 +187,22 @@ cp .claude/settings.local.json.example .claude/settings.local.json
 
 - Claude Code CLI v2.0 이상
 - WebSearch 및 WebFetch 권한
+
+---
+
+## Automated Publishing (CI/CD)
+
+This project is configured to automatically publish to PyPI using GitHub Actions.
+
+### Steps to Release a New Version:
+1.  **Update Version**: Change the `version` in `pyproject.toml` (e.g., `0.1.0` -> `0.1.1`).
+2.  **Commit & Push**: Commit your changes and push to `main`.
+3.  **Tag release**: Create and push a git tag:
+    ```bash
+    git tag v0.1.1
+    git push origin v0.1.1
+    ```
+4.  **Automatic Build**: GitHub Actions will detect the tag, build the package, and upload it to PyPI automatically.
 
 ---
 
