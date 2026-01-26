@@ -190,6 +190,44 @@ cp .claude/settings.local.json.example .claude/settings.local.json
 
 ---
 
+## Python 패키지 사용법 (Python Package Usage)
+
+이 패키지는 Claude Code뿐만 아니라 파이썬 코드에서도 직접 SEO 지침을 가져와 사용할 수 있습니다.
+
+### 설치
+
+```bash
+pip install naver-blog-seo
+```
+
+### 기본 사용법
+
+`NaverSEO` 클래스를 사용하여 각 작업(작성/진단)에 필요한 시스템 프롬프트를 생성할 수 있습니다.
+
+```python
+from naver_blog_seo import NaverSEO
+
+seo = NaverSEO()
+
+# 1. 블로그 작성용 시스템 프롬프트 가져오기
+blog_prompt = seo.get_system_prompt(task_type="blog")
+
+# 2. 블로그 진단(Audit)용 시스템 프롬프트 가져오기
+audit_prompt = seo.get_system_prompt(task_type="audit")
+
+# 3. 구조화된 출력(JSON)을 위한 프롬프트 생성
+# Pydantic 모델 스키마가 포함된 프롬프트를 반환합니다.
+structured_prompt = seo.get_system_prompt(task_type="audit", structured=True)
+```
+
+### API Reference
+
+- `get_blog_instruction()`: 블로그 최적화 지침 전체 텍스트 반환
+- `get_audit_instruction()`: 블로그 진단(Audit) 지침 전체 텍스트 반환
+- `get_system_prompt(task_type, structured=False)`: LLM 공급자(OpenAI, Anthropic 등)에게 전달할 완성된 시스템 프롬프트 반환
+
+---
+
 ## Automated Publishing (CI/CD)
 
 This project is configured to automatically publish to PyPI using GitHub Actions.
