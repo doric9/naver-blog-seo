@@ -1,7 +1,6 @@
 import importlib.resources as resources
 import json
-from pathlib import Path
-from typing import Literal, Optional, Type, Union
+from typing import Literal, Optional, Type
 from pydantic import BaseModel
 from .models import SEOAnalysis, SEOAuditResult
 
